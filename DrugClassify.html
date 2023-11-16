@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PharmaClassify</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>PharmaClassify</h1>
+						<p>Employed Unsupervised Machine Learning techniques to autonomously classify drugs based on inherent patterns and features within the dataset.</p>
+                        <p>Data Cleaning | Data Preprocessing | Feature Engineering | Unsupervised ML | Random Forest | Naive Bayes | SMOTE Technique  </p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/PharmaClassify-A-Supervised-Machine-Learning-Approach-for-Drug-Classification-/tree/main" class="button">Github Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<h2><b>Introduction</b></h2>
+								<p>The increasing complexity of the drug landscape has prompted concerns about the accurate classification of drugs, leading to potential risks for patients. This issue directly impacts patient safety, as the mismanagement of medications can result in adverse events. The lack of a unified drug classification system further complicates prescribing, dispensing, and monitoring drug therapies for healthcare professionals.</p>
+                                <p>To address these challenges, it is crucial to develop a comprehensive drug classification system that is both accurate and standardized. This system should consider patient-specific factors such as age, gender, blood pressure levels, cholesterol levels, and the sodium-to-potassium ratio to ensure precision in prescribing and monitoring medications.</p>
+                                <h3>Drug Categories:</h3>
+  <ol>
+    <li><strong>Category 1:</strong> Most dangerous, strictly regulated, and requires physician supervision.</li>
+    <li><strong>Category 2:</strong> Moderate risk, prescription with restrictions.</li>
+    <li><strong>Category 3:</strong> Low risk, available over the counter.</li>
+    <li><strong>Category 4:</strong> Deemed safe, sold without restrictions.</li>
+    <li><strong>Category 5:</strong> Generally safe with some potential risks, sold without a prescription but with restrictions.</li>
+  </ol>
+                            <ol>
+                                <li>
+                                    <br>
+                                    <center>
+                                    <img src="images/pharma_prop.png" alt="" width="600">
+                                    </center>
+                                    <br>
+                                    <p>This visual aid facilitates a comparative analysis, revealing that <b>Drug Y</b> holds the largest share, comprising <b>45.5%</b> of the dataset. Following this, <b>Drug X</b> accounts for <b>27%</b>, while<b> Drugs A, B, and C</b> exhibit smaller proportions at<b>11.5%, 8%, and 8%</b>, respectively.
+
+                                        This breakdown provides a concise overview of the dataset's drug composition, enabling a clear understanding of the prevalence of each drug and their relative contributions to the overall distribution.</p>
+                                </li>
+                            </ol>
+                            <p>The implementation of this new drug classification system aims to safeguard public health by protecting individuals from potentially dangerous drugs. By providing a structured framework, the system ensures that those in need of medication can access it safely and responsibly.</p>    
+                            
+                            <h2><b>Feature Engineering</b></h2>
+								<p>In practical scenarios, it's uncommon for all features to bear equal importance during model development. Understanding the impact of each input feature on the target becomes essential. This can be achieved through statistical tests like Pearson, ANOVA, Chi-Square, or by employing machine learning algorithms such as Random Forests.</p>
+                                <p>To identify important features, we implemented the SelectFromModel function available in the Sklearn library. This function utilizes a base estimator to recognize significant features based on a specified threshold, a metric used to calculate feature importance.</p>
+                                <center>
+                                    <img src="images/pharma_feature.png" alt="" width="500">
+                                </center>
+                                <p>The features deemed important for our model are: <b>BP_HIGH, Age, Sodium to Potassium Ratio</b>. This selection provides valuable insights into the specific features that significantly contribute to the model's decision-making process. By focusing on these key features, we aim to enhance both the predictive performance and interpretability of the model.</p>
+                            <h2><b>Model Development and SMOTE Technique</b></h2>
+                                <p>
+                                    The training report for the Naive Bayes model presents a mixed performance across different classes. Notably, class 3 exhibits a precision, recall, and F1-score of 0, indicating that the model struggled to correctly identify instances of this class. Class 0 achieved perfect precision but showed a lower recall, suggesting some instances were not accurately classified. On the other hand, class 4 displayed relatively good precision and recall. </p>
+                                    <center>
+                                        <img src="images/pharma_cf1.png" alt="">
+                                    </center>
+                                    <p> The overall <b>accuracy</b> on the training set was <b>68%</b>, with a weighted average <b>F1-score of 0.64</b>. In the testing report, there are improvements in performance metrics, particularly for class 3, though challenges persist with precision and recall for this class. The model achieved an <b>accuracy of 80%</b> on the testing set, with a weighted average <b>F1-score of 0.77</b>. The macro-average <b>precision, recall, and F1-score</b> for the testing set were <b>0.71, 0.76, and 0.72</b>, respectively. Despite the improvement, the model's struggle with class 3 suggests a need for further analysis and potential adjustments to enhance its predictive capabilities, especially in dealing with imbalanced classes.</p>
+                                <p>Upon implementing SMOTE and re-evaluating the model, the results on the training set remained largely unchanged. However, on the testing set, there was an overall improvement in precision, recall, and F1-score for all classes, including a notable enhancement for class 3. Despite this improvement, class 3 still exhibited suboptimal precision and recall, indicating persistent challenges in predicting this class accurately.</p>    
+                                <center>
+                                    <img src="images/pharma_cf2.png" alt="">
+                                </center>
+                                <p>In summary, while SMOTE had a positive impact on the testing set's overall performance, challenges in predicting class 3 persisted. The imbalanced nature of the classes and the inherent complexity of certain classes may necessitate further analysis. Additional investigations into the characteristics of class 3, feature importance, and potential model adjustments might be crucial for enhancing the model's predictive capabilities, especially in scenarios with imbalanced datasets. Furthermore, considering alternative evaluation metrics and optimizing the threshold for class prediction could contribute to a more comprehensive understanding of the model's performance.</p>
+                            </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

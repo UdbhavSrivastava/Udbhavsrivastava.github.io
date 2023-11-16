@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <style>
+            .image-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .image-container img {
+                max-width: 48%; /* Adjust the width as needed */
+                height: auto;
+            }
+        </style>
+		<title>Global Ed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Global Ed Progress</h1>
+						<p>Exploring the Educational Landscape: A Rigorous Examination of Literacy Rates in Developing Nations through Statistical Analysis and Hypothesis Testing to Inform Global Education Strategies and Initiatives.</p>
+                        <p>Data Cleaning | Data Vizualisation | Statistical Analysis| Hypothesis Testing | Pandas | Matplotlib  </p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/GlobalEd-Progress-in-Developing-Nations" class="button">Github Link</a></li>
+                        </ul>
+                    </header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<h2><b>Introduction</b></h2>
+								<p>This database serves as a vital repository of educational insights, encompassing four key indicators crucial for understanding and addressing the nuanced challenges faced by children globally. The <b>Adjusted Net Attendance Rate (ANAR)</b> gauges the percentage of children attending an education level appropriate for their age or higher. The <b>Out-of-School Children Rate (OOSR)</b> highlights the percentage of those within the official age range for a given education level not enrolled. Additionally, the <b>Completion Rate</b> provides insight into the percentage of children or young people completing each level of education, and the <b>Foundational Learning </b> Skills indicator assesses proficiency in reading and numeracy among 7 to 14-year-olds. This resource not only offers a comprehensive overview but also facilitates a nuanced examination of each indicator, contributing to informed decision-making and targeted interventions in global education initiatives.</p>
+                                <h2><b>Statistical Analysis Questions</b></h2>
+
+    <ol>
+        <li>
+            <h4><b>Which country exhibits the highest percentage of children attending an education level compatible with their age or higher?</b></h4>
+            <br>
+            <img src="images/ANAR_country.png" alt="" width="1000">
+            <p>In the context of developing nations, <b>Turkmenistan</b> emerges as a standout performer, boasting the highest percentage of individuals who have successfully completed Primary and Upper Secondary levels appropriate for their age or higher. This accomplishment underscores Turkmenistan's commitment to education and highlights significant progress in academic attainment.</p>
+            <p>Furthermore, <b>Macedonia</b> takes the lead in educational achievements, with the highest percentage of people successfully completing Lower Secondary levels appropriate for their age or higher. This achievement reflects North Macedonia's dedication to providing a robust educational foundation for its populace.</p>
+        </li>
+
+        <li>
+            <h4><b>Which country demonstrates the highest percentage of children or young people within the official age range for a given education level who are not attending pre-primary, primary, secondary, or higher levels of education?</b></h4>
+            <br>
+            <img src="images/OOS_country.png" alt="" width="1000">
+            <p>In the landscape of developing nations, noteworthy trends emerge in educational accessibility. <b>Guinea-Bissau</b> claims the unfortunate distinction of having the highest percentage of individuals out of school at the Primary level. This emphasizes the pressing need for targeted interventions and support to ensure universal access to primary education in Guinea-Bissau.</p>
+            <p>Similarly, <b>Madagascar</b> faces a significant challenge, as it reports the highest percentage of individuals out of school at the Upper Secondary level. Addressing this issue is crucial for Madagascar's educational landscape, requiring strategic measures to enhance enrollment and retention rates at the upper secondary level.</p>
+            <p>In the category of Lower Secondary education, <b>Pakistan</b> stands out with the highest percentage of people out of school. This finding underscores the importance of focused initiatives to address barriers to education at the lower secondary level in Pakistan, ensuring that all individuals have the opportunity to access and complete their secondary education. These observations highlight the diverse challenges that developing nations face in achieving universal education and call for targeted efforts to address specific gaps at different educational stages.</p>
+        </li>
+
+        <li>
+            <h4><b>Is there a statistically significant correlation between the percentage of children attending an appropriate education level and the severity of functional difficulties within the group of children with disabilities?</b></h4>
+            <br>
+            <center>
+            <img src="images/Anar_disab.png" alt="">
+            </center>
+            <p>In examining the educational landscape across diverse countries, the data reveals intriguing patterns in school completion levels appropriate for age or higher. Remarkably, individuals <b>without disabilities</b> exhibit a commendable <b>63.15%</b> completion rate, reflecting widespread success in achieving educational milestones. Conversely, individuals <b>with disabilities</b>, while slightly lower at <b>41.24%</b>, still demonstrate significant strides in educational attainment. </p>
+            <p>This contrast underscores the imperative to address inclusivity and accessibility in global education initiatives, ensuring that all individuals, irrespective of disability, enjoy equal opportunities for educational success. The findings illuminate the need for targeted policies and interventions to bridge gaps and foster an inclusive educational environment that caters to the diverse needs of learners worldwide.</p>
+        </li>
+
+        <li>
+            <h4><b>Is there a statistically significant correlation between the percentage of children out-of-school and the severity of functional difficulties within the group of children with disabilities?</b></h4>
+            <br>
+            <center>
+            <img src="images/Oos_diab.png" alt="">
+            </center>
+            <p>In examining the prevalence of individuals out of school across the included countries, the data presents a noteworthy comparison between those without and with disabilities. Individuals <b>without disabilities</b> show a <b>13.02%</b> out-of-school rate, signaling challenges in ensuring universal access to education. Strikingly similar, individuals <b> with disabilities</b> experience a slightly higher rate at <b>13.28%</b>, emphasizing the shared hurdles faced by both groups in maintaining educational engagement. </p>
+            <p>These statistics underscore the collective need for targeted interventions and inclusive policies to address the complex factors contributing to school disengagement across diverse populations. By recognizing and addressing these challenges, global education initiatives can strive towards ensuring equitable access to education for all individuals, fostering a more inclusive and accessible learning environment.</p>
+        </li>
+
+        <li>
+            <h4><b>Is there a statistically significant difference in the percentage of children attending an education level compatible with their age or higher between rural and urban areas?</b></h4>
+            <br>
+            <div class="image-container">
+                <img src="images/ANAR_rural.png" alt="">
+                <img src="images/Anar_urban.png" alt="">
+            </div>
+            <br>
+            <p>The disparity between rural and urban areas is evident in the statistically significant difference in educational attendance percentages. Urban areas, with a higher overall attendance rate, suggest a potential correlation between geographic location and educational opportunities. The nuanced breakdown for individuals with and without disabilities further emphasizes the need for targeted interventions to address accessibility challenges in both rural and urban settings. These findings underscore the importance of tailoring education policies to address specific regional needs, fostering inclusivity, and ensuring equitable access to education for all individuals, regardless of their geographical location or abilities.</p>
+        </li>
+
+        <li>
+            <h4><b>Are there statistically significant correlations between out-of-school rates for children in rural and urban areas?</b></h4>
+            <br>
+            <div class="image-container">
+                <img src="images/OOS_rural.png" alt="">
+                <img src="images/OOS_urban.png" alt="">
+            </div>
+            <br>
+            <p>The statistical analysis reveals a notable disparity in out-of-school rates between rural and urban areas. The higher out-of-school rates in rural settings may necessitate targeted interventions to improve accessibility and enrollment in formal education. The nuanced examination of out-of-school rates for individuals with and without disabilities further underscores the importance of inclusive policies that address diverse needs in both rural and urban contexts. These findings provide a foundation for tailored strategies to reduce out-of-school rates, ensuring equitable access to education for all children, regardless of their geographical location or abilities.</p>
+        </li>
+    </ol>
+
+    <h2><b>Hypothesis Testing</b></h2>
+    <h4><b>Do gender-based disparities exist in ANAR for children with functional difficulties compared to those without functional difficulties?</b></h4>
+    <br>
+    <p>     <b>Null Hypothesis (H0):</b> There is no significant difference in attendance rates between male and female children.</p>
+    <p>     <b>Alternative Hypothesis (H1):</b> There is a significant difference in attendance rates between male and female children.</p>
+    <p>T-statistic: -0.5083014927398378                    P-value: 0.6118575046553687</p>
+    <p>The T-statistic of -0.5083 indicates a negligible difference between the attendance rates of male and female children with functional difficulties compared to those without. Importantly, the P-value of 0.6119 is above the commonly used significance level of 0.05. Thus, we fail to reject the null hypothesis.</p>
+    <p>The statistical analysis does not provide sufficient evidence to support the existence of significant gender-based disparities in ANAR for children with functional difficulties compared to those without. This suggests that, in the context of attendance rates, gender does not emerge as a decisive factor when considering children with functional difficulties.</p>
+</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
