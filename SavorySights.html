@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SavorySights</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>SavorySights</h1>
+						<p>Delved into Cuisine Popularity Analysis, to uncover patterns and trends in the distribution of different cuisines, providing valuable insights into cultural preferences within a specific region</p>
+                        <p>Data Collection | FourSquare APIs| Data Cleaning |Exploratory Data Analysis | Machine Learning | Data visualization | Folium | K-Means Clustering</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/SavorySights-" class="button">Github Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<h2><b>Introduction</b></h2>
+								<p>In the heart of a vibrant metropolis, this project navigates through the diverse tapestry of neighborhoods within an expansive urban landscape. Distinct districts, each with its unique character, contribute to the rich cultural mosaic of the region. The population, spanning millions, converges in a harmonious blend of tradition and modernity, shaping the essence of this sprawling urban center.</p>                                    
+								<p>The journey goes beyond statistical analysis, integrating real-world insights through the <b> FourSquare API </b>. This API facilitates the identification of venues in each neighborhood, adding a layer of proximity to the culinary narrative. Leveraging aggregative ratings, the project discerns the standout dining destinations.</p>
+                                <p>Visualization becomes a powerful tool in this exploration, as the <b>Folium library</b> paints a vivid picture of neighborhood rankings. Through an amalgamation of data sources, this project aims to unravel the culinary delights embedded in the fabric of a city, offering a comprehensive guide to the diverse and dynamic dining experiences within its bounds.</p>
+                                <h2><b>Exploratiory Data Analysis and Visualization</b></h2>
+                                <ol>
+                                    <li>
+                                        <h4><b>What are the variations in average restaurant ratings across different localities in a City, and how can this information be leveraged to identify the top-rated culinary neighborhoods?</b></h4>
+                                        <br>
+                                        <center>
+                                            <img src="images/SavorySights_High.png" alt="">
+                                        </center>
+                                        <br>
+								        <p>In our city's diverse culinary landscape, the revelation that Kasbah in Greater Kailash boasts the highest average restaurant rating at an impressive 4.5 unveils a culinary haven. This locality, nestled in the city's heart, has garnered acclaim for its diverse and top-notch dining establishments, offering a symphony of flavors that captivate the palates of discerning diners.</p>
+                                        <br>
+                                        <center>
+                                            <img src="images/SavorySights_Low.png" alt="">
+                                        </center>
+                                        <br>
+								        <p>Conversely, Janakpuri stands in stark contrast, holding the lowest average restaurant rating of 2.6. Despite its dynamic and bustling atmosphere, this locality has faced challenges in achieving culinary excellence, reflecting a range of experiences that have left room for improvement.</p>
+                                        <p>This information serves as a compass for residents, tourists, entrepreneurs, and local businesses alike. Residents in Kasbah can confidently explore the diverse culinary offerings within their locality, while those in Janakpuri might consider neighboring localities with higher average ratings. Entrepreneurs and investors can use this data to guide investment decisions, and local businesses can leverage their positive ratings for marketing. Additionally, city planners can utilize this information to understand the dynamics of different localities and identify areas for potential development in the culinary infrastructure. In essence, these extreme ratings provide valuable insights into the city's culinary tapestry, steering both enthusiasts and industry players toward excellence and improvement within the dynamic cityscape.</p>
+							        </li>
+                                    <li>
+                                        <h4><b>How does the distribution of restaurants in the top 10 localities vary, and what insights can be gleaned from the percentage share of Connaught Place, the locality with the highest concentration of restaurants?</b></h4>
+                                        <center>
+                                            <img src="images/SavorySights_Distribution.png" alt="">
+                                        </center>
+                                        <br>
+                                        <p>The distribution of the top number of restaurants across the city, with Connaught Place claiming the highest share at 14.7%, provides valuable insights into the culinary landscape. This information is instrumental for both residents and visitors seeking diverse dining options. For residents, it highlights Connaught Place as a thriving hub with a rich array of culinary choices, influencing their dining preferences and potentially encouraging local businesses. Tourists, armed with the knowledge that Connaught Place boasts the highest number of restaurants, may be drawn to explore this area for its diverse gastronomic offerings. Additionally, this data is pertinent for urban planners and policymakers as it sheds light on the popularity and vibrancy of specific localities, guiding decisions related to infrastructure, tourism, and economic development. For entrepreneurs in the food industry, understanding the concentration of restaurants in Connaught Place can inform business strategies, providing an indication of high demand and competition. In essence, this pie chart serves as a visual guide, unraveling the city's culinary hotspots and offering practical insights for residents, tourists, businesses, and policymakers alike.</p>
+                                    </li>
+                                </ol>
+                            <h2><b>Kmeans Clustering</b></h2>
+                                <ul>
+                                    <p>The application of K-means clustering has bestowed a fascinating revelation, categorizing localities into distinct clusters based on the most recommended types of cuisine</p>
+                                    <center>
+                                        <img src="images/SavorySights_clusters.png" alt="" width="700">
+                                    </center>
+                                    <br>
+                                    <p><b>Cluster 1 (Red)</b> emerges as a haven for enthusiasts of <b>Indian cuisine</b>, where a myriad of authentic flavors and culinary experiences await.</p> 
+                                    <p><b>Cluster 2 (Green)</b>, on the other hand, beckons those in search of luxurious gastronomy, hosting an array of <b>hotels and nightclubs</b> that promise not only delectable meals but an immersive dining ambiance.</p>
+                                    <p><b>Fast food</b> enthusiasts find their haven in both <b>Cluster 3 (Blue)</b> and <b>Cluster 5(Orange)</b>, where localities within these clusters boast an abundance of quick and flavorsome bites. </p>
+                                    <p>Lastly, <b>Cluster 4 (Yellow)</b> emerges as the go-to destination for <b>cafe connoisseurs</b> and <b>pizza aficionados</b>, where cozy cafes and pizzerias create an atmosphere conducive to relaxation and indulgence.</p>
+                                    <p>This clustering analysis not only serves as a gastronomic guide for residents and visitors but also holds significant implications for entrepreneurs and restaurateurs seeking strategic insights into the optimal locales for specific culinary ventures. It unveils the diverse and nuanced nature of our city's culinary landscape, steering both food enthusiasts and business pioneers toward the rich and varied experiences each cluster has to offer.</p>
+                                </ul>
+                                </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
