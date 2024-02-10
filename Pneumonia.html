@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SavorySights</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>PneumoNet: Deep Learning for Pneumonia Classification</h1>
+						<p>Utilizing deep learning techniques, this project aims to accurately classify pneumonia cases from medical images, optimizing model performance through hyperparameter tuning and early stopping strategies</p>
+                        <p>Data Preprocessing | Deep Learning Model Training | Model Evaluation | PyTorch | Hyperparameter Tuning | Model Evaluation</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/PneumoniaMNIST" class="button">Github Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span>-->
+								<h2><b>Introduction</b></h2>
+								<p>The purpose of the project is to develop a deep learning model capable of accurately classifying pneumonia cases from medical images. By leveraging advanced techniques in deep learning, the project aims to contribute to the field of medical diagnostics by providing a reliable tool for assisting healthcare professionals in identifying pneumonia cases more efficiently and accurately.</p>
+                                <br>
+                                <center>
+                                    <img src="images/pneumoniaintro.png" alt="">
+                                </center>
+                                </br>
+                                <h2><b>Objective</b></h2>
+                                <ol>
+                                    <li>
+                                        <h4><b>Improved Diagnostic Accuracy</b></h4>
+								        <p>Pneumonia diagnosis can be challenging, particularly in cases where symptoms overlap with other respiratory conditions. By training a deep learning model on medical images, the project seeks to enhance diagnostic accuracy by automating the process of identifying pneumonia-related abnormalities in the lungs.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Reduced Workload</b></h4>
+                                        <p>Automating the pneumonia classification process through deep learning can help reduce the workload on healthcare professionals, allowing them to focus their time and expertise on more complex cases or tasks requiring human judgment.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Efficient Screening</b></h4>
+                                        <p>The developed model could serve as a screening tool to assist healthcare professionals in quickly identifying potential pneumonia cases. This could be particularly beneficial in settings with limited access to specialized medical expertise or resources, enabling earlier intervention and treatment.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Research and Development</b></h4>
+                                        <p>Beyond immediate clinical applications, the project contributes to ongoing research and development efforts in the field of medical imaging and artificial intelligence. By exploring novel techniques and methodologies, the project may uncover insights that advance the broader understanding of pneumonia diagnosis and treatment.</p>
+                                    </li>
+                                </ol>
+                                <h2><b>Methodologies</b></h2>
+                                <ol>
+                                    <li>
+                                        <h4><b>Model Architecture</b></h4>
+                                        <p>The model architecture chosen for this task is <b>ResNet-18</b>, a widely used CNN architecture known for its effectiveness in image classification tasks. The model was modified to accept single-channel input, as the medical images are likely grayscale.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Data Preprocessing</b></h4>
+                                        <p>Training, validation, and test datasets were preprocessed using standard techniques, including normalization and conversion to tensors. Data augmentation techniques such as random horizontal flipping and rotation were considered but ultimately excluded from the final pipeline.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Loss Function and Optimizer</b></h4>
+                                        <p>The loss function utilized for training the model is AUCMLoss, which is well-suited for optimizing multi-class area under the curve (AUC) metrics. The optimizer employed is <b>PESG (Parameter Efficient Stochastic Gradient)</b>, configured with specific hyperparameters to enhance model convergence and performance.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Training and Evaluation:</b></h4>
+                                        <p>The training process involved iterating through multiple epochs, monitoring performance on training, validation, and test sets. <b>AUC-ROC (Area Under the Receiver Operating Characteristic Curve)</b> was chosen as the primary evaluation metric due to its robustness in binary classification tasks.</p>
+                                    </li>
+                                </ol>
+                            <h2><b>Results</b></h2>
+                                <ul>
+                                    <p>After training the model for the specified number of epochs, the following results were obtained:</p>
+                                    <center>
+                                        <img src="images/Pneumoniaoutput.png" alt="" width="700">
+                                    </center>
+                                    <br>
+                                    <li>
+                                    <p>Final Training AUC: <b>0.9912</b></p> 
+                                    </li>
+                                    <li>
+                                    <p>Final Test AUC: <b>0.9216</b></p>
+                                    </li>
+                                    <p>These results indicate strong performance of the model in distinguishing between pneumonia and non-pneumonia cases. The high training AUC suggests that the model has effectively learned the underlying patterns in the training data. The slightly lower test AUC indicates that the model generalizes well to unseen data, though there may be some degree of overfitting.</p>
+                                </ul>
+                            <h2><b>Conclusion</b></h2>
+                                <p>In conclusion, the developed deep learning model demonstrates promising performance in pneumonia classification based on medical images. With a final test AUC of <b>0.9216</b>, the model exhibits strong discriminative ability and holds potential for aiding in the accurate diagnosis of pneumonia cases.</p>
+                                </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
