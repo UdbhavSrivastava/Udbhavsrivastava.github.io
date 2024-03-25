@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SalesTrend Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>SalesTrend Analysis</h1>
+						<p>Analyzing sales data through SQL queries and visualizations in Tableau to gain insights into transactional trends, customer behavior, product performance, and regional sales patterns.</p>
+                        <p>Data Cleaning | SQL | Tableau | Joins | Subqueries | Window Functions</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/SalesTrend-Analysis" class="button">Github Link</a></li>
+                            <li><a href="https://public.tableau.com/app/profile/udbhav.srivastava7988/viz/SalesDashboard_17112120980450/SalesDashboard" class="button">Dashboard Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<h2><b>Introduction</b></h2>
+								<p>In today's competitive business environment, data-driven decision-making is crucial for success. Combining the power of SQL queries with data visualization tools like Tableau enables businesses to extract actionable insights from their datasets efficiently. Let's delve into how each SQL query, coupled with Tableau, addresses specific business challenges, empowering organizations to make informed decisions.</p>
+                                <h2><b>Schema</b></h2>
+                                <center>
+                                    <img src="images/Schema.png" alt="">
+                                </center>
+                                    <h4><b>Order Table</b></h4>
+                                    <p>The "Order" table stores transactional data, including order details such as IDs, dates, shipping information, customer IDs, and product-related metrics like sales, quantity, discounts, and profits.</p>
+                                    <h4><b>Customer Table</b></h4>
+                                    <p>The "Customer" table contains customer identities and names, enabling businesses to track customer interactions, personalize marketing efforts, and enhance customer relationships.</p>
+                                    <h4><b>Product Table</b></h4>
+                                    <p>The "Product" table provides information about the products offered, including categories, sub-categories, and names, aiding in product performance evaluation and inventory management.</p>
+                                    <h4><b>Location Table</b></h4>
+                                    <p>The "Location" table captures geographic data such as postal codes, cities, states, and regions, facilitating regional sales analysis, market targeting, and logistics optimization.</p>
+                                <h2><b>SQL Analysis</b></h2>
+                                <ol>
+                                    <li>
+                                        <h4><b> What is the trend of total sales revenue over the past year, broken down by month?</b></h4>
+                                        <br>
+								        <p>Analyzing sales trends over time can help in understanding seasonal variations and making informed decisions about inventory management, marketing strategies, and resource allocation.</p>
+                                        <center>
+                                            <img src="images/Q1.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> Which are the top 10 best-selling products in terms of total sales revenue?</b></h4>
+                                        <br>
+								        <p>Understanding the distribution of sales revenue among different customer segments can guide customer segmentation strategies, targeted marketing campaigns, and customer relationship management initiatives.</p>
+                                        <center>
+                                            <img src="images/Q2.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> How does total sales revenue vary across different customer segments?</b></h4>
+                                        <br>
+								        <p>Analyzing sales trends over time can help in understanding seasonal variations and making informed decisions about inventory management, marketing strategies, and resource allocation.</p>
+                                        <center>
+                                            <img src="images/Q3.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What is the average order value for each product category?</b></h4>
+                                        <br>
+								        <p>Calculating the average order value per product category can provide insights into customer purchasing behavior and inform pricing strategies, cross-selling opportunities, and product bundling tactics.</p>
+                                        <center>
+                                            <img src="images/Q4.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> How many new customers were acquired each month?</b></h4>
+                                        <br>
+								        <p>Tracking new customer acquisition over time helps evaluate the effectiveness of marketing campaigns, assess customer acquisition costs, and measure business growth.</p>
+                                        <center>
+                                            <img src="images/Q5.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What is the profit margin percentage for the top 10 products?</b></h4>
+                                        <br>
+								        <p>Analyzing profit margin percentages for top-selling products is essential for evaluating product profitability, pricing strategies, and identifying opportunities for cost optimization.</p>
+                                        <center>
+                                            <img src="images/Q6.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What are the top 3 cities by total sales revenue?</b></h4>
+                                        <br>
+								        <p>Identifying high-performing sales regions can inform market expansion strategies, resource allocation for sales teams, and targeting of promotional activities.</p>
+                                        <center>
+                                            <img src="images/Q7.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What is the total profit generated in each region?</b></h4>
+                                        <br>
+								        <p>Analyzing profit generation by region helps evaluate regional performance, optimize supply chain logistics, and identify opportunities for market development or improvement.</p>
+                                        <center>
+                                            <img src="images/Q8.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What is the cumulative sales revenue over time for each product category?</b></h4>
+                                        <br>
+								        <p>Tracking cumulative sales revenue over time helps assess product category performance, identify trends, and make informed decisions about inventory management and product portfolio optimization.</p>
+                                        <center>
+                                            <img src="images/Q9.png" alt="">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h4><b> What is the rank of products based on their total sales revenue within each product category?</b></h4>
+                                        <br>
+								        <p>Understanding the relative sales performance of products within each category helps identify top performers, prioritize inventory management, and optimize marketing strategies.</p>
+                                        <center>
+                                            <img src="images/Q10.png" alt="">
+                                        </center>
+                                    </li>
+                                    
+                                </ol>
+                            <h2><b>Conclusion</b></h2>
+                            <p>SQL queries play a crucial role in extracting actionable insights from business data. By leveraging these queries, businesses can gain a deeper understanding of their operations, identify growth opportunities, optimize performance, and ultimately drive success in a competitive marketplace. Whether it's analyzing sales trends, identifying top-selling products, or evaluating regional performance, SQL queries provide valuable tools for informed decision-making and strategic planning.</p>
+                                </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
