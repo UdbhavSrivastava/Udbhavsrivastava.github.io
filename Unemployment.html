@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Unemployment Rate</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Time Series Forecasting for Unemployment Rate</h1>
+						<p>Employing a comprehensive approach, this study explores the efficacy of ARIMA, Prophet, LSTM, and TimeGPT models in forecasting the unemployment rate over time, offering insights into their respective strengths and weaknesses for predictive analytics in economic forecasting.</p>
+                        <p>ARIMA | Prophet | LSTM | TimeGPT</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/Forecasting-Unemployment-Rate-Time-Series" class="button">Github Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span>-->
+								<h2><b>Introduction</b></h2>
+                                <p>In today's dynamic economic landscape, accurate forecasting of key indicators such as the unemployment rate plays a crucial role in informing policy decisions, aiding businesses in strategic planning, and empowering individuals to navigate the job market effectively. Time series forecasting, a fundamental technique in predictive analytics, offers valuable insights into the future trends of such indicators. This project delves into the realm of time series forecasting for the unemployment rate, employing a multi-model approach to assess the performance and capabilities of various forecasting methodologies.</p>
+                                <h2><b>Data Preprocessing</b></h2>
+                                <ol>
+                                    <li>
+                                        <h3><b>Stationarity Check</b></h3>
+                                        <p>Stationarity check in time series refers to the process of assessing whether a time series data possesses stationarity, a key assumption in many time series analysis techniques. Stationarity implies that the statistical properties of a time series, such as its mean, variance, and autocovariance, remain constant over time.</p>
+                                        <ul>
+                                            <li>
+                                                <h4><b>Augmented Dickey Fuller Test</b></h4>
+                                                <p>The Augmented Dickey-Fuller (ADF) test is a statistical test commonly used in time series analysis to determine whether a given time series is stationary or not</p>
+                                                <p><b>Null Hypothesis:</b> The null hypothesis of the ADF test is that the time series has a unit root, indicating that it is non-stationary. In other words, if the null hypothesis cannot be rejected, it suggests that the time series is non-stationary and exhibits a unit root, implying a linear trend or dependence on past values.</p>
+                                                <p><b>Alternate Hypothesis:</b> The alternative hypothesis of the ADF test is that the time series is stationary, meaning it does not have a unit root. Rejecting the null hypothesis in favor of the alternative hypothesis indicates that the time series is likely stationary.</p>
+                                                <center>
+                                                    <img src="images/UR_ADF.png" alt="" width="400">
+                                                </center>
+                                                <p>The time series is likely stationary (reject the null hypothesis of non-stationarity).</p>
+                                            </li>
+                                            <li>
+                                                <h4><b>Kwiatkowski-Phillips-Schmidt-Shin (KPSS) Test</b></h4>
+                                                <p>The Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test is another statistical test used in time series analysis to assess the stationarity of a time series data. Unlike the Augmented Dickey-Fuller (ADF) test, which tests for the presence of a unit root (indicating non-stationarity), the KPSS test evaluates the null hypothesis of stationarity against the alternative hypothesis of non-stationarity around a deterministic trend.</p>
+                                                <p><b>Null Hypothesis:</b> The null hypothesis of the KPSS test is that the time series is stationary around a deterministic trend. In other words, the null hypothesis assumes that the time series is stationary, except for possible trend components.</p>
+                                                <p><b>Alternate Hypothesis:</b> The alternative hypothesis of the KPSS test is that the time series has a unit root or is non-stationary around a deterministic trend. Rejecting the null hypothesis in favor of the alternative hypothesis suggests non-stationarity.</p>
+                                                <center>
+                                                    <img src="images/UR_KPSS.png" alt="" width="400">
+                                                </center>
+                                                <p>The time series is likely stationary (fail to reject the null hypothesis of stationarity based on KPSS test).</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4><b>Seasonal Decompostion</b></h4>
+                                        <p>Seasonal decomposition is a technique used in time series analysis to separate a time series into its underlying components, including trend, seasonality, and noise. This decomposition process helps in understanding the various patterns and trends present in the data, making it easier to model and forecast the series accurately.</p>
+                                        <center>
+                                            <img src="images/UR_SD.png" alt="" width="700">
+                                        </center>
+                                    </li>
+                                </ol>
+                                <h2><b>Models</b></h2>
+                                <ol>
+                                    <li>
+                                        <h3><b>Statistical Models</b></h3>
+                                        <ul>
+                                            <li>
+                                                <h4><b>AutoRegressive(AR) Model</b></h4>
+                                                <p>An Autoregressive (AR) model is a type of time series model used in statistics and econometrics to understand and predict future values based on past observations. Here's a brief overview of AR models:</p>
+                                                <center>
+                                                    <img src="images/UR_AR.png" alt="" width="700">
+                                                </center>
+                                                <center>
+                                                    <img src="images/UR_AR_output.png" alt="" width="700">
+                                                </center>
+                                            </li>
+                                            <li>
+                                                <h4><b>Moving Average (MA) Model</b></h4>
+                                                <p>A Moving Average (MA) model is a type of time series model used to understand and predict future values based on the average of past forecast errors. Unlike Autoregressive (AR) models that depend on past values of the series, MA models depend on past forecast errors.</p>
+                                                <center>
+                                                    <img src="images/UR_MA.png" alt="" width="700">
+                                                </center>
+                                                <center>
+                                                    <img src="images/UR_MA_output.png" alt="" width="700">
+                                                </center>
+                                            </li>
+                                            <li>
+                                                <h4><b>ARIMA Model</b></h4>
+                                                <p>ARIMA stands for Autoregressive Integrated Moving Average. It's a popular time series analysis and forecasting method that combines Autoregressive (AR) and Moving Average (MA) components with differencing to handle non-stationary data.</p>
+                                                <p>The <b>AR</b> part models the relationship between the current observation and its lagged (past) observations. It depends on the lag order p, which indicates how many past observations are considered.
+
+                                                    The <b>I</b> part involves differencing the series to make it stationary. It is denoted by the differencing order d.
+                                                    
+                                                    The <b>MA</b> part models the dependency between the current observation and a linear combination of past forecast errors. It depends on the lag order q, indicating how many past forecast errors are considered.</p>
+                                                <center>
+                                                    <img src="images/UR_ARIMA.png" alt="" width="700">
+                                                </center>
+                                                <center>
+                                                    <img src="images/UR_ARIMA_output.png" alt="" width="700">
+                                                </center>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3><b>Prophet Model</b></h3>
+                                        <p>Facebook Prophet is an open-source forecasting tool developed by Facebook's Core Data Science team. It is designed to make time series forecasting accessible to non-experts by providing a simple and intuitive interface while also incorporating advanced forecasting techniques.</p>
+                                        <center>
+                                            <img src="images/UR_prophet.png" alt="" width="700" height="450">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>Deep Learning Model (LSTM)</b></h3>
+                                        <p>Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture that is widely used for processing and predicting sequential data, including time series data. LSTM networks are particularly effective for time series forecasting tasks due to their ability to capture long-term dependencies and temporal patterns in the data.</p>
+                                        <p>Time series data is inherently sequential, with observations ordered chronologically. LSTM networks are designed to process sequential data, where each data point (e.g., a time step in the series) is fed into the network one at a time.</p>
+                                        <center>
+                                            <img src="images/UR_LSTM_output.png" alt="" width="700" height="450">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>Transformer Model (TimeGPT)</b></h3>
+                                        <p>TimeGPT, developed by Nixtla, is a generative pre-trained transformer model specialized in prediction tasks. TimeGPT was trained on the largest collection of data in history – over 100 billion rows of financial, weather, energy, and web data – and democratizes the power of time-series analysis. This tool is capable of discerning patterns and predicting future data points in a matter of seconds.</p>
+                                        <center>
+                                            <img src="images/UR_GPT_output.png" alt="" width="700">
+                                        </center>
+                                    </li>
+                                </ol>
+                            <h2><b>Results</b></h2>
+                                <ul>
+                                    <p>After training the model for the specified number of epochs, the following results were obtained:</p>
+                                    <table border="1">
+                                        <tr>
+                                          <th>Model</th>
+                                          <th>RMSE</th>
+                                        </tr>
+                                        <tr>
+                                            <td>AR</td>
+                                            <td>2.2040</td>
+                                          </tr>
+                                          <tr>
+                                            <td>MA</td>
+                                            <td>1.8431</td>
+                                          </tr>
+                                        <tr>
+                                          <td>ARIMA</td>
+                                          <td>1.8480</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Prophet</td>
+                                          <td>1.9609</td>
+                                        </tr>
+                                        <tr>
+                                          <td>LSTM</td>
+                                          <td>1.0424</td>
+                                        </tr>
+                                        <tr>
+                                          <td>TimeGPT</td>
+                                          <td><b>0.4617</b></td>
+                                        </tr>
+                                      </table>
+                                      
+                                </ul>
+                            <h2><b>Conclusion</b></h2>
+                                <p>Based on the Root Mean Square Error (RMSE) values you provided, it seems that the TimeGPT model outperforms other models in forecasting unemployment rates. With an RMSE of 0.4617, TimeGPT has the lowest error compared to other models like AR, MA, ARIMA, Prophet, and LSTM. Therefore, it can be concluded that the transformer-based TimeGPT model is the most efficient for forecasting unemployment rates based on the given data.</p>
+                            </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

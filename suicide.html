@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Suicide Risk</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>NLP Based Suicide Risk Assessment</h1>
+						<p>Employing natural language processing (NLP), this project endeavors to assess suicide risk with precision, leveraging advanced language analysis to offer insights crucial for timely intervention and support</p>
+                        <p>Word2Vec | CNN | LSTM | Transformers | BERT | ELECTRA | PyTorch</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/UdbhavSrivastava/NLP-based-Suicide-risk-assessment" class="button">Github Link</a></li>
+                        </ul>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span>-->
+								<h2><b>Introduction</b></h2>
+                                <p>Social media has become a ubiquitous platform where individuals often express personal struggles, including those related to mental health. Detecting suicidal ideation in such texts can be paramount for early intervention.​Advancements in NLP and machine learning present a unique opportunity to identify patterns that signal distress.</p>
+								<p>The purpose of this project is to develop a sophisticated suicide risk assessment tool using natural language processing techniques, with the aim of providing proactive support and intervention for individuals in distress, ultimately reducing the incidence of suicide and promoting mental well-being in our communities.</p>
+                                <h2><b>Data Preprocessing</b></h2>
+                                <ol>
+                                    <li>
+                                        <h4><b>Text Preprocessing</b></h4>
+                                        <center>
+                                            <img src="images/suicide_preprocessing.png" alt="" width="700">
+                                        </center>
+								        <p>Pneumonia diagnosis can be challenging, particularly in cases where symptoms overlap with other respiratory conditions. By training a deep learning model on medical images, the project seeks to enhance diagnostic accuracy by automating the process of identifying pneumonia-related abnormalities in the lungs.</p>
+                                    </li>
+                                    <li>
+                                        <h4><b>Word Embedding (Word2Vec)</b></h4>
+                                        <p>Word2Vec is a powerful technique in the field of natural language processing (NLP) that has revolutionized the way we represent and understand textual data. At its core, Word2Vec aims to transform words into dense vector representations, or embeddings, in a continuous vector space. This method captures semantic relationships between words by learning from the distributional patterns of words in large text corpora. One of the key innovations of Word2Vec is its ability to preserve the semantic meaning of words through vector arithmetic. Words with similar meanings tend to have similar vector representations, enabling operations like vector addition and subtraction to produce meaningful results, such as analogies or semantic associations</p>
+                                        <center>
+                                            <img src="images/suicide_word2vec.png" alt="" width="300">
+                                        </center>
+                                        <p>Word2Vec stands as a cornerstone in natural language processing, epitomizing the transformation of words into dense vector representations within a continuous vector space. This methodological marvel enables the encapsulation of semantic relationships between words, facilitating the capturing of synonymous terms and contextual nuances.</p>
+                                    </li>
+                                </ol>
+                                <h2><b>Models</b></h2>
+                                <ol>
+                                    <li>
+                                        <h3><b>Logistic Regression</b></h3>
+                                        <p>Logistic regression serves as a fitting choice for analyzing datasets where one or more independent variables influence a dichotomous outcome. This statistical technique provides a robust framework for understanding the relationship between predictor variables and the binary outcome variable. With its ability to estimate the probability of a particular outcome occurring, logistic regression acts as a foundational model against which subsequent models can be benchmarked.</p>
+                                        <center>
+                                            <img src="images/suicide_log.png" alt="" width="600">
+                                        </center>
+                                        <p>Results</p>
+                                        <center>
+                                            <img src="images/suicide_log_output.png" alt="" width="500">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>CNN</b></h3>
+                                        <p>In the realm of image processing, convolutional neural networks (CNNs) stand at the forefront, adept at capturing spatial hierarchies and identifying salient features within images. However, it's worth noting that CNNs are not confined to image analysis alone; they have also found application in natural language processing (NLP), where they excel at tasks such as text classification, sentiment analysis, and language modeling.</p>
+                                        <center>
+                                            <img src="images/suicide_cnn.png" alt="" width="700" height="450">
+                                        </center>
+                                        <p>Results</p>
+                                        <center>
+                                            <img src="images/suicide_cnn_output.png" alt="" width="700">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>LSTM</b></h3>
+                                        <p>In the context of NLP, LSTM networks have emerged as a cornerstone in various applications, including language modeling, machine translation, and sentiment analysis. Their innate capacity to model long-range dependencies and contextual nuances within textual sequences allows them to grasp the subtle nuances of language and extract meaningful semantic representations from unstructured text data. Moreover, LSTMs excel in handling variable-length sequences, accommodating the inherent flexibility and complexity of natural language.</p>
+                                        <center>
+                                            <img src="images/suicide_lstm.png" alt="" width="700">
+                                        </center>
+                                        <p>Results</p>
+                                        <center>
+                                            <img src="images/suicide_lstm_output.png" alt="" width="700">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>BERT</b></h3>
+                                        <p>Bidirectional Encoder Representations from Transformers (BERT) stands as a groundbreaking innovation in the realm of natural language processing (NLP), revolutionizing the way we approach language understanding and semantic comprehension tasks. </p>
+                                        <center>
+                                            <img src="images/suicide_bert.png" alt="" width="700">
+                                        </center>
+                                        <p>Unlike traditional language models that process text sequentially, BERT employs a novel approach known as masked language modeling, where it predicts missing words within a sentence based on the surrounding context. This bidirectional modeling strategy allows BERT to grasp intricate semantic relationships and contextual nuances within textual sequences, yielding profound insights into the underlying meaning and intent.</p>
+                                        <center>
+                                            <img src="images/suicide_bert_output.png" alt="" width="500">
+                                        </center>
+                                    </li>
+                                    <li>
+                                        <h3><b>ELECTRA</b></h3>
+                                        <p>ELECTRA, an innovative model in the realm of natural language processing (NLP), introduces a novel approach to pre-training transformer-based language models. Unlike traditional masked language models like BERT, which predict missing words within a sentence, ELECTRA employs a discriminator-generator architecture, where it replaces a subset of input tokens with plausible alternatives and trains a discriminator to distinguish between the replaced tokens and the original ones generated by a generator.</p>
+                                        <center>
+                                            <img src="images/suicide_electra.png" alt="" width="700">
+                                        </center>
+                                        <p>This adversarial training scheme enables ELECTRA to learn more efficiently from the entire input text, resulting in representations that capture deeper contextual understanding and semantic nuances. By focusing on the efficient use of computational resources and maximizing the amount of pre-training signal, ELECTRA achieves state-of-the-art performance on various downstream NLP tasks, including text classification, sentiment analysis, and question answering, solidifying its position as a pioneering model in the field of language understanding and representation learning.</p>
+                                        <center>
+                                            <img src="images/suicide_electra_output.png" alt="" width="500">
+                                        </center>
+                                    </li>
+                                </ol>
+                            <h2><b>Results</b></h2>
+                                <ul>
+                                    <p>After training the model for the specified number of epochs, the following results were obtained:</p>
+                                    <center>
+                                        <img src="images/suicide_output.png" alt="" width="700">
+                                    </center>
+                                </ul>
+                            <h2><b>Conclusion</b></h2>
+                                <p>
+                                    Utilizing a diverse array of NLP techniques, this study aimed to identify suicidal ideation within social media (Reddit) posts with exceptional accuracy. Models including <b>Logistic Regression, CNN, LSTM, BERT, and ELECTRA</b> were employed and rigorously compared. Results highlighted the transformative efficacy of transformer-based models, emphasizing their potential for real-world applications, particularly in facilitating timely and sensitive interventions for at-risk individuals.</p>
+                                </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<p></p>
+						<p>My passion for data extends beyond the classroom and into the real world, where I'm eager to collaborate, innovate, and make a meaningful impact. Let's connect and explore opportunities to work together, share insights, and contribute to the exciting landscape of data-driven solutions, all in the service of advancing civilization.</p>
+					</section>
+					<section>
+						<h2>Contact</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>601 Luther St W &bull; College Station, TX 77840 &bull; USA</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:udbhavs2311@gmail.com">udbhavs2311@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udbhav-srivastava23/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/UdbhavSrivastava" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.worldcubeassociation.org/persons/2016SRIV01" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
